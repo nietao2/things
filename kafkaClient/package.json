@@ -1,0 +1,20 @@
+{
+  "name": "kafkaClient",
+  "version": "0.1.0",
+  "description": "kafkaClient",
+  "scripts": {
+    "start": "node hello-world-server.js"
+  },
+  "repository": "",
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "dependencies": {
+	    "kafka-node": "0.2.29"
+  },
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
