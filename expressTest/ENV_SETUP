@@ -1,0 +1,18 @@
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test2
+
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test2 --from-beginning
+
+
+{"key":"kafka-back_::1","value":"12345"}
+{"key":"kafka-back_::ffff:192.168.3.102","value":"12345"}
+
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test2
